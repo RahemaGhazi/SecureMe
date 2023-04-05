@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Service</title>
+    <link rel="stylesheet" href="stylesheeeet.css">
+</head>
+<body style="background-color: black;">
+    
+   
+    <div class="frame">
+        <div class="center">
+            <div class="title">
+                <h3>Drop file to Upload </h3>
+            </div>
+            
+            <form action="/uploadFile" method="POST" enctype="multipart/form-data" style="background-color: black; height:150px; width:200px; color:antiquewhite; margin-top: 10px; margin-left: 10px;" >
+               
+                <label>Filename</label>
+                <input type="text" name="fileName">
+                <input type="file" name="file" style="margin-left:10px; margin-top: 40px;">
+                <br><br>
+                <input type="submit" value="Submit" style="background-color: orangered; margin-top: 20px;">
+            </form>
+        </div>
+      
+    </div>
+    
+</body>
+</html>

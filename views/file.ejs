@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Retrieve File</title>
+</head>
+<body>
+  <form id="retrieveForm">
+    <label for="fileHash">File Hash:</label>
+    <input type="text" id="fileHash" name="fileHash">
+    <button type="submit">Retrieve</button>
+  </form>
+  <div id="fileInfo"></div>
+
+  <script>
+    const form = document.getElementById('retrieveForm');
+    const fileInfoDiv = document.getElementById('fileInfo');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const fileHash = document.getElementById('fileHash').value;
+      const response = await fetch(`/getFile/${fileHash}`);
+      const fileData = await response.json();
+
+      if (fileData.exist) {
+        const fileInfo = `
+          <p>File Name: ${fileData.fileName}</p>
+          <p>File Type: ${fileData.fileType}</p>
+          <p>Date Added: ${fileData.dateAdded}</p>
+        `;
+        fileInfoDiv.innerHTML = fileInfo;
+      } else {
+        fileInfoDiv.innerHTML = '<p>File not found</p>';
+      }
+    });
+  </script>
+</body>
+</html>

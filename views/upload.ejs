@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Result</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: antiquewhite;
+        text-align: center;
+        margin-top: 100px;
+        
+    }
+    div{
+        height: 200px;
+        width: 800px;
+        margin-top: 40px;
+        margin-left: 100px;
+        text-align: left;
+
+    }
+</style>
+<body >
+    <img src="PNG-2.png" alt="Product" class="w3-image" style="height: 200px;">
+    <div>
+    <h1 style="color:orangered ; ">File Uploaded</h1>
+    
+    <p>Name: <%= fileName %></p>
+    <p style="color: yellow;">File Hash: <a href="https://ipfs.io.ipfs/<%= fileHash %>" style="color: antiquewhite;"><%= fileHash %></a></p>
+</div>
+
+
+</body>
+</html>
