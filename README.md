@@ -9,3 +9,4 @@ On CMD of VS run following commands:
 -truffle migrate -reset
 Then go to powershell and Run Command: "nmp install" before running "node ./index.js"
 
+*This code gives Gas error*
